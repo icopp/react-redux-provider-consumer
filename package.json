@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description":
     "Get Redux state values with the Context API rather than a `connect` HOC.",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "scripts": {
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "prepublishOnly": "tsc -p ./ --outDir build/"
   },
   "author": "Ian Copp <copp.ian@gmail.com>",
   "license": "MIT",

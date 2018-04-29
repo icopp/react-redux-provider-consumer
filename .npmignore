@@ -88,5 +88,5 @@ typings/
 # NodeJS - next.js build output
 .next
 
-# Project - Build output
-build
+# Project - Raw source
+src

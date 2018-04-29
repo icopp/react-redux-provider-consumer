@@ -1,0 +1,26 @@
+{
+  "name": "react-redux-context",
+  "version": "1.0.0",
+  "description":
+    "Get Redux state values with the Context API rather than a `connect` HOC.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "precommit": "pretty-quick --staged"
+  },
+  "author": "Ian Copp <copp.ian@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.x.x",
+    "react": "^16.3.x",
+    "redux": "^4.x.x"
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.x.x",
+    "@types/react": "^16.3.x",
+    "husky": "^0.14.0",
+    "prettier": "^1.x.x",
+    "pretty-quick": "^1.x.x",
+    "typescript": "^2.8.x"
+  }
+}

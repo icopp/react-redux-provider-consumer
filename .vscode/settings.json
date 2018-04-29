@@ -1,0 +1,19 @@
+{
+  // Always auto-format if possible on save.
+  "editor.formatOnSave": true,
+
+  // Enable auto-formatting for these languages.
+  // "javascript.format.enable": true,
+  // "typescript.format.enable": true,
+
+  // Exclude these folders from default searches.
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/build": true,
+    "**/coverage": true,
+    ".vscode/chrome": true
+  },
+
+  // Use the repo's version of Typescript instead of the bundled version.
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

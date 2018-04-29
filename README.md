@@ -1,4 +1,4 @@
-# react-redux-context
+# `react-redux-provider-consumer`
 
 This is a small library meant to serve as an alternative to
 [React Redux](https://github.com/reactjs/react-redux) for people who want to cut
@@ -38,7 +38,7 @@ have async loading going on).
 #### Example of use
 
 ```js
-import { createReduxContext } from 'react-redux-context'
+import { createReduxContext } from 'react-redux-provider-consumer'
 import store from '../store' // or wherever your store is exported
 
 const { Provider, Consumer } = createReduxContext(store)

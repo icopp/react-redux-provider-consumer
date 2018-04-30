@@ -19,10 +19,11 @@ rather than immediately covering all bases.
 ```js
 createReduxContext(
   store: Redux.Store<S>,
-  defaultState?: S
+  defaultState?: M,
+  mapper: (storeState: S) => M = storeState => storeState
 ): {
   Provider: React.Component<{}>,
-  Consumer: React.Consumer<S>
+  Consumer: React.Consumer<M>
 }
 ```
 
@@ -35,17 +36,27 @@ be the first loaded state from `store` (which should usually be your initial
 state if you're setting up everything synchronously, but might not be if you
 have async loading going on).
 
+If `mapper` is given, it will be used to map the store state accordingly before
+updating the Provider's value. If the new and old values are the same (using
+strict equality), no update will happen. For best performance, have a mapper
+that returns a value reliably comparable with `===` (e.g. primitives or the same
+object, but not identical but different objects).
+
 #### Example of use
 
 ```js
 import { createReduxContext } from 'react-redux-provider-consumer'
 import store from '../store' // or wherever your store is exported
 
-const { Provider, Consumer } = createReduxContext(store)
+const { Provider, Consumer } = createReduxContext(
+  store,
+  null,
+  state => state.userId
+)
 
 export const UserId = () => (
   <span>
-    Your user ID is: <Consumer>{state => state.userId}</Consumer>
+    Your user ID is: <Consumer>{userId => userId}</Consumer>
   </span>
 )
 

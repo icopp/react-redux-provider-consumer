@@ -1,6 +1,6 @@
 {
   "name": "react-redux-provider-consumer",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description":
     "Get Redux state values with the Context API rather than a `connect` HOC.",
   "main": "./build/index.js",
